@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="icon" href="cloudy.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        {{>header}}
+        <div class="mainContainer">
+            <div class="searchbar">
+                <input type="text" name="search" id="search" placeholder="Location..." />
+                <button id="search" type="submit" onclick="fetchData()">Search</button>
+            </div>
+                <p id="loading"></p>
+                <span id="error"></span>
+            <div class="main">
+                <div class="left">
+                    <p class="result">Results For <span id="location"></span></p>
+                    <p class="temp"><img src="" alt="logo" id="logo" /> <span id="temp"></span></p>
+                    <div class="feels">
+                        <p>Feels Like :  <span id="feelsLike"></span> </p>
+                    </div>
+                    <div class="extraa">
+                        <p>Percipitation: <span id="prec"></span></p>
+                        <p>Humidity: <span id="humidity"></span></p>
+                        <p>Wind: <span id="wind"></span></p>
+                    </div>
+                </div>
+                <div class="right">
+                    <p id="date"></p>
+                    <p id="time"></p>
+                    <p id="forecast"></p>
+                </div>
+            </div>
+        </div>
+        {{>footer}}
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
