@@ -6,5 +6,5 @@ To use this project first clone it.
 
 Then install all npm module by running command npm i.
 
-To start server, run command npm run start
+To start server, run command npm run start.
 
