@@ -1,8 +1,9 @@
+// http://localhost:3000
 const fetchData = () => {  
     document.getElementsByClassName('main')[0].setAttribute('style','display:flex;')
     document.getElementById('loading').innerText = "Loading.......";
     const search = document.getElementById('search').value;
-    fetch("http://localhost:3000/weather?search=" 
+    fetch("/weather?search=" 
     + encodeURIComponent(search)
     ).then((res) => {
     res.json().then((data) => {
